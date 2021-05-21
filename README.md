@@ -6,7 +6,7 @@
 
 ## 💬 About
 
-This project was developed following [[COURSE_NAME]]([COURSE_LINK]) course.
+This project was developed following Alura's [PHP Exceptions: Tratamento de erros](https://cursos.alura.com.br/course/php-exceptions-tratamento-erros) course.
 
 ## :computer: Technologies
 
@@ -19,17 +19,17 @@ This project was developed following [[COURSE_NAME]]([COURSE_LINK]) course.
 ## :cd: Installation
 
 ```sh
-git clone [PROJECT_REPO_LINK]
+git clone git@github.com:filipe1309/al-php-exceptions.git
 ```
 
 ```sh
-cd [PROJECT_REPO_NAME]
+cd al-php-exceptions
 ```
 
 ## :runner: Running
 
 ```sh
-...
+php ...
 ```
 
 ## License
