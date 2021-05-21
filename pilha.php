@@ -3,23 +3,24 @@
 function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
-
     try {
-        $fixedArray = new SplFixedArray(2);
-        $fixedArray[3] = 'value'; // RuntimeException
+        funcao2();
     } catch (RuntimeException $e) {
-        echo 'RuntimeException error' . PHP_EOL;
+        echo 'f1() fix f2(): RuntimeException error' . PHP_EOL;
     }
 
-    // $divByZero = intdiv(5, 0); // DivisionByZeroError
-
-    funcao2();
     echo 'Saindo da função 1' . PHP_EOL;
 }
 
 function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
+
+    $divByZero = intdiv(5, 0); // DivisionByZeroError
+
+    $fixedArray = new SplFixedArray(2);
+    $fixedArray[3] = 'value'; // RuntimeException
+
     for ($i = 1; $i <= 5; $i++) {
         echo $i . PHP_EOL;
     }
