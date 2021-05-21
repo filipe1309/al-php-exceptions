@@ -3,10 +3,16 @@
 function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
+
     try {
         funcao2();
-    } catch (RuntimeException $e) {
-        echo 'f1() fix f2(): RuntimeException error' . PHP_EOL;
+    } catch (RuntimeException | DivisionByZeroError $e) {
+        echo '----ERROR----' . PHP_EOL;
+        echo '----f1() fix f2(): RuntimeException | DivisionByZeroError error' . PHP_EOL;
+        echo '----' . $e->getMessage() . PHP_EOL;
+        echo '----' . $e->getLine() . PHP_EOL;
+        echo '----' . PHP_EOL . $e->getTraceAsString() . PHP_EOL;
+        echo '----' . PHP_EOL;
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
@@ -24,7 +30,6 @@ function funcao2()
     for ($i = 1; $i <= 5; $i++) {
         echo $i . PHP_EOL;
     }
-    //var_dump(debug_backtrace());
     echo 'Saindo da função 2' . PHP_EOL;
 }
 
