@@ -3,6 +3,12 @@
 function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
+
+    // $fixedArray = new SplFixedArray(2);
+    // $fixedArray[3] = 'value'; // RuntimeException
+
+    $divByZero = intdiv(5, 0); // DivisionByZeroError
+
     funcao2();
     echo 'Saindo da função 1' . PHP_EOL;
 }
