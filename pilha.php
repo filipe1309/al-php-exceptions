@@ -4,10 +4,14 @@ function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
 
-    // $fixedArray = new SplFixedArray(2);
-    // $fixedArray[3] = 'value'; // RuntimeException
+    try {
+        $fixedArray = new SplFixedArray(2);
+        $fixedArray[3] = 'value'; // RuntimeException
+    } catch (RuntimeException $e) {
+        echo 'RuntimeException error' . PHP_EOL;
+    }
 
-    $divByZero = intdiv(5, 0); // DivisionByZeroError
+    // $divByZero = intdiv(5, 0); // DivisionByZeroError
 
     funcao2();
     echo 'Saindo da função 1' . PHP_EOL;
