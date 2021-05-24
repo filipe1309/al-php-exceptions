@@ -13,6 +13,8 @@ function funcao1()
         echo '----' . $e->getLine() . PHP_EOL;
         echo '----' . PHP_EOL . $e->getTraceAsString() . PHP_EOL;
         echo '----' . PHP_EOL;
+
+        throw new RuntimeException('Excetion treated, but, throwing exception anyway =)', 1, $e);
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
@@ -22,14 +24,8 @@ function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
 
-    $divByZero = intdiv(5, 0); // DivisionByZeroError
+    throw new RuntimeException();
 
-    $fixedArray = new SplFixedArray(2);
-    $fixedArray[3] = 'value'; // RuntimeException
-
-    for ($i = 1; $i <= 5; $i++) {
-        echo $i . PHP_EOL;
-    }
     echo 'Saindo da função 2' . PHP_EOL;
 }
 
