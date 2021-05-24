@@ -6,9 +6,9 @@ function funcao1()
 
     try {
         funcao2();
-    } catch (RuntimeException | DivisionByZeroError $e) {
+    } catch (Throwable $e) {
         echo '----ERROR----' . PHP_EOL;
-        echo '----f1() fix f2(): RuntimeException | DivisionByZeroError error' . PHP_EOL;
+        echo '----f1() fix f2(): Throwable error' . PHP_EOL;
         echo '----' . $e->getMessage() . PHP_EOL;
         echo '----' . $e->getLine() . PHP_EOL;
         echo '----' . PHP_EOL . $e->getTraceAsString() . PHP_EOL;
@@ -22,7 +22,7 @@ function funcao2()
 {
     echo 'Entrei na função 2' . PHP_EOL;
 
-    throw new RuntimeException();
+    throw new BadFunctionCallException();
 
     echo 'Saindo da função 2' . PHP_EOL;
 }
