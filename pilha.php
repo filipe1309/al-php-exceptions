@@ -13,8 +13,6 @@ function funcao1()
         echo '----' . $e->getLine() . PHP_EOL;
         echo '----' . PHP_EOL . $e->getTraceAsString() . PHP_EOL;
         echo '----' . PHP_EOL;
-
-        throw new RuntimeException('Excetion treated, but, throwing exception anyway =)', 1, $e);
     }
 
     echo 'Saindo da função 1' . PHP_EOL;
