@@ -56,5 +56,10 @@ try {
 
         throw new RuntimeException('Excetion treated, but, throwing exception anyway =)', 1, $e);
     }
-
 ```
+
+## Class 6
+
+https://www.php.net/manual/en/function.set-error-handler.php
+
+https://www.youtube.com/watch?v=YO3PRChajWc&ab_channel=PHPPR
